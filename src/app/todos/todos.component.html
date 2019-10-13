@@ -1,0 +1,8 @@
+<div class="form-group">
+    <input type="text" class="form-control" #iteminput (keyup.enter)="additem(iteminput)" placeholder="Write on TODO">
+</div>
+<div class="list-group" *ngIf="items">
+    <button class="card list-group-item"  rel="noopener" (click)="removeItem(item)" *ngFor="let item of items" >
+            {{item}}
+    </button>
+</div>
